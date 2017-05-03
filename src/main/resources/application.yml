@@ -1,7 +1,29 @@
 server:
   port: 8080
-  context-path: /springboot
+  context-path: /
 girl:
   name: B
-  age : 18
-  content : content : ${name},age : ${age}
+  age: 18
+  content: content:${name},age:${age}
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbgirl?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: wuchaofei
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+my:
+   name: forezp
+   age: 12
+   number:  ${random.int}
+   uuid : ${random.uuid}
+   max: ${random.int(10)}
+   value: ${random.value}
+   greeting: hi,i'm  ${my.name}

@@ -1,4 +1,4 @@
-package com.wuchaofei.springboot;
+package com.wuchaofei.springboot.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
